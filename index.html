@@ -249,7 +249,7 @@
             <div class="container">
                 <!-- Portfolio Section Heading-->
                 <div class="text-left">
-                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">Projects</h2>
+                    <h2>Projects</h2>
                 </div>
                 <p>Select the project you would like to view.</p>
                 <br>
@@ -288,23 +288,53 @@
             </div>
         </div>
         <div class="section">
-            <div class="slide projectbg">
-                <!-- <img class="projectbg" src="./assets/img/projectbg.jpg"> -->
-                <div class="container">
-                    <div class="row justify-content-right text-white" style="opacity: 1;">
-                        <div class="col">
-                            <h2>Very nice modern project</h2>
-                            <p>
-                                What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                                when an unknown printer took a galley of type and scrambled it to make a type specimen
-                                book it has?
-                            </p>
-                            <button id="viewgallery" type="button" class="btn btn-light">View gallery</button>
-                        </div>
+            <div class="slide">
 
+                <div class="big-image">
+                    <div class="image-overlay">
+                        <div class="container">
+                            <div class="row justify-content-right text-right" style="opacity: 1;">
+                                <div class="col-lg-4 ml-2">
+
+                                </div>
+                                <div class="col-lg-6 col-md-8 ml-2">
+                                    <h2>Very nice modern project</h2>
+                                    <p>
+                                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting
+                                        industry Lorem Ipsum has been the industry's standard dummy text ever since the
+                                        1500s
+                                        when an unknown printer took a galley of type and scrambled it to make a type
+                                        specimen
+                                        book it has?
+                                    </p>
+                                    <button id="viewgallery" type="button" class="btn btn-light">View gallery</button>
+                                </div>
+    
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- <div class="project">
+                    <div class="container">
+                        <div class="row justify-content-right text-white" style="opacity: 1;">
+                            <div class="col">
+                                <h2>Very nice modern project</h2>
+                                <p>
+                                    What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry Lorem Ipsum has been the industry's standard dummy text ever since the
+                                    1500s
+                                    when an unknown printer took a galley of type and scrambled it to make a type
+                                    specimen
+                                    book it has?
+                                </p>
+                                <button id="viewgallery" type="button" class="btn btn-light">View gallery</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> -->
+
             </div>
             <div class="slide">
                 <div class="row justify-content-center">
@@ -358,27 +388,36 @@
                     responsiveHeight: 330,
                     controlArrows: false,
                     scrollOverflow: true,
+                    scrollHorizontally: false,
+
                     // fitToSection: true
                 });
+                fullpage_api.setKeyboardScrolling(false, 'left, right');
             } else {
                 $('#fullpage').fullpage({
                     //options here
                     licenseKey: 'CE05B51A-93CC4AF9-88748412-F97D6DED',
                     anchors: ['main', 'about', 'portfolio', 'someproject', 'quote', 'contact'],
-                    css3: false,
+                    css3: true,
                     scrollingSpeed: 800,
                     navigation: false,
                     slidesNavigation: false,
-                    responsiveHeight: 330,
+                    // responsiveHeight: 330,
                     controlArrows: false,
                     scrollOverflow: true,
+                    scrollHorizontally: false
                     // fitToSection: true
                 });
+
+                fullpage_api.setResponsive(true);
+                fullpage_api.setKeyboardScrolling(false, 'left, right');
             }
 
             $('#viewgallery').click(() => {
                 fullpage_api.moveSlideRight();
             });
+
+
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
