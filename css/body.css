@@ -112,6 +112,23 @@
          url('fonts/architects-daughter-v10-latin-regular.svg#ArchitectsDaughter') format('svg'); /* Legacy iOS */
 }
 
+/* .section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+} */
+
+.image-thumbnail {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}
+
+.navbar {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
 .main {
     background: #00d2ff;
     /* fallback for old browsers */
@@ -283,15 +300,10 @@
     height: 400px;
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1800px;
-    }
+.container {
+    padding-top: 50px;
 }
 
-.section {
-    height: 100vjh;
-}
 
 .bottom-margin {
     margin-bottom: 10px;
@@ -411,6 +423,8 @@ p {
 h1 {
     font-family: 'Architects Daughter';
     font-size: 4rem;
+    text-align: center;
+   
 }
 
 h2 {
@@ -432,4 +446,17 @@ h4 {
 h5 {
     font-family: 'Staatliches';
     font-size: 1rem;
+}
+
+#map {
+    height: 100%;
+}
+  
+.contact-container {
+    background-color: #fff;
+    padding: 2em;
+}
+
+.card {
+    padding: 2em;
 }
