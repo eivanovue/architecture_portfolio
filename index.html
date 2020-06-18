@@ -21,25 +21,6 @@
     <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/simple-lightbox.min.css">
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet"> -->
-    <style>
-        #wrapper {
-            position: relative;
-        }
-
-        #over_map {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-        }
-    </style>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
     </script>
@@ -52,8 +33,6 @@
     <!-- Third party plugin JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/simple-lightbox.min.js"></script>
-    <script src="js/simple-lightbox.jquery.min.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlqPrkcvJ4Fp1-v6-Q3L6yScXObEm0lgY&callback=initMap&libraries=&v=weekly"
@@ -62,178 +41,62 @@
 </head>
 
 <body id="page-top">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light fixed-top shadow-sm p-3 mb-5 bg-white">
+        <div class="d-flex flex-grow-1">
+            <br>
+            <a class="navbar-brand logo" href="#">
+                <!-- GABRIELA TANCHEVA -->
+                <img src="./assets/img/logo.png" style="margin-left:50px" width="130" height="50">
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar7">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-left" id="myNavbar7">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="./index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./works.html" class="nav-link">Works</a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.linkedin.com/in/gabriela-tancheva-04263b171/" target="_blank"
+                        class="nav-link"><i class="fab fa-linkedin-in"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.instagram.com/matrix.art/" target="_blank" class="nav-link"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div id="fullpage">
         <div class="section main">
-            <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+            <div class="image-overlay">
                 <div class="container">
-                    <!-- <a class="navbar-brand js-scroll-trigger text-secondary" href="#page-top">GT ARCHITECTURE</a> -->
+                    <div class="row justify-content-center">
+                        <h1 class="text-white">GABRIELA TANCHEVA</h1>
+                    </div>
 
-                </div>
-            </nav>
-            <div class="row justify-content-center">
-                <h1 class="text-white">GABRIELA TANCHEVA</h1>
-            </div>
-        </div>
-        <div class="section secondary">
-            <div class="container">
-                <div class="text-left">
-                    <h2>Projects</h2>
-                </div>
-                <p>Select the project you would like to view.</p>
-                <br>
-                <div class="row justify-content-center">
-                    <div class="col-md-6 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal0">
-                            <div
-                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            </div><img class="img-fluid" src="assets/img/portfolio/icon1.png" alt="Log Cabin" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                            <div
-                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            </div><img class="img-fluid" src="assets/img/portfolio/icon2.png" alt="Tasty Cake" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                            <div
-                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            </div><img class="img-fluid" src="assets/img/portfolio/icon3.png" alt="Circus Tent" />
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                            <div
-                                class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                            </div><img class="img-fluid" src="assets/img/portfolio/icon4.png" alt="Controller" />
+
+                    <div class="row justify-content-center">
+                        <div class="text-white">
+                            <a class="ct-btn-scroll ct-js-btn-scroll" href="#about"><img alt="Arrow Down Icon"
+                                    src="https://raw.githubusercontent.com/solodev/scroll-down-anchor/master/images/arrow-down-1.png"></a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="section">
-            <div class="slide">
 
-                <div class="big-image">
-                    <div class="image-overlay">
-                        <div class="container">
-                            <div class="row justify-content-right text-right" style="opacity: 1;">
-                                <div class="col-lg-4 ml-2">
 
-                                </div>
-                                <div class="col-lg-6 col-md-8 ml-2">
-                                    <h2>Very nice modern project</h2>
-                                    <p>
-                                        What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and
-                                        typesetting
-                                        industry Lorem Ipsum has been the industry's standard dummy text ever since the
-                                        1500s
-                                        when an unknown printer took a galley of type and scrambled it to make a type
-                                        specimen
-                                        book it has?
-                                    </p>
-                                    <button id="viewgallery" type="button" class="btn btn-light">View gallery</button>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="container">
-                    <div class="row">
-                        <div class="gallery">
-                            <div class="col-md-12">
-                                <a style="color: #000;" href="index.html#portfolio"><i class="fas fa-arrow-left"></i>
-                                    &nbsp; Go back</p></a>
-                                <p>
-
-                                    <div class="row">
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg"
-                                                    class="img-fluid">
-                                            </a>
-                                        </figure>
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </figure>
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </figure>
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </figure>
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </figure>
-                                        <figure class="col-md-4">
-                                            <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg"
-                                                data-size="1600x1067">
-                                                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg"
-                                                    class="img-fluid" />
-                                            </a>
-                                        </figure>
-                                        <!-- <figure class="col-md-4">
-                                    <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg" data-size="1600x1067">
-                                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg" class="img-fluid" />
-                                    </a>
-                                  </figure>
-                                  <figure class="col-md-4">
-                                    <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg" data-size="1600x1067">
-                                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg" class="img-fluid" />
-                                    </a>
-                                  </figure>
-                                  <figure class="col-md-4">
-                                    <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg" data-size="1600x1067">
-                                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg" class="img-fluid" />
-                                    </a>
-                                  </figure> -->
-                                    </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
 
             </div>
-        </div>
-        <div class="section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 text-center">
-                        <h2><i class="fas fa-passport"></i> &nbsp; Cirriculum Vitae</h2>
-                    </div>
-                    <div class="col-lg-3 text-center">
-                        <form action="./resume.html">
-                            <button type="submit" class="btn btn-dark">
-                                <h5 style="margin:0;">View</h5>
-                            </button>
-                        </form>
-                    </div>
-                </div>
 
-            </div>
         </div>
         <div class="section secondary">
             <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
@@ -244,51 +107,44 @@
             </blockquote>
         </div>
         <div class="section secondary">
-            <!-- <div id="wrapper"> -->
-            <div id="map">
-
-            </div>
-
+            <div id="map"> </div>
             <div id="over_map">
                 <div class="container">
                     <div class="row justify-content-center">
-                       <div class="col-md-6">
-                        <div class="card">
-                            <h2 class="text-dark text-left">Get in touch</h2>
-                            <form class="text-dark">
-								<div class="form-group">
-									<label for="inputName">Name</label>
-									<input id="name" type="name" class="form-control form-control-lg" id="inputName"
-										aria-describedby="nameHelp" placeholder="Your Name...">
-								</div>
-								<div class="form-group">
-									<label for="inputEmail">Email address</label>
-									<input id="email" type="email" class="form-control form-control-lg" id="inputEmail"
-										aria-describedby="emailHelp" placeholder="Your Email...">
-								</div>
-								<div class="form-group">
-									<label for="inputMessage">Message</label>
-									<textarea id="message" type="message"
-										class="form-control form-control-lg form-message" id="inputMessage"
-										aria-describedby="messageHelp" placeholder="Your Message..."
-										rows="3"></textarea>
-								</div>
+                        <div class="col-sm-5 col-md-5">
+                            <div class="card">
+                                <h2 class="text-dark text-left">Get in touch</h2>
+                                <form class="text-dark">
+                                    <div class="form-group">
+                                        <label for="inputName">Name</label>
+                                        <input id="name" type="name" class="form-control form-control-lg" id="inputName"
+                                            aria-describedby="nameHelp" placeholder="John Doe">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email address</label>
+                                        <input id="email" type="email" class="form-control form-control-lg"
+                                            id="inputEmail" aria-describedby="emailHelp"
+                                            placeholder="example@email.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputMessage">Message</label>
+                                        <textarea id="message" type="message"
+                                            class="form-control form-control-lg form-message" id="inputMessage"
+                                            aria-describedby="messageHelp" placeholder="..." rows="3"></textarea>
+                                    </div>
 
-								<button id="form-submit" type="submit" class="btn btn-dark btn-lg btn-block">Send me
-									a message!</button>
-							</form>
+                                    <button id="form-submit" type="submit" class="btn btn-dark btn-lg btn-block">Send me
+                                        a message!</button>
+                                </form>
+                            </div>
+
                         </div>
-                        
-                       </div>
-                            
+
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
         </div>
     </div>
-    <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js"></script>
     <!-- This following line is only necessary in the case of using the option `scrollOverflow:true` -->
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/scrolloverflow.min.js"></script>
@@ -296,13 +152,10 @@
     <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.extensions.min.js"></script>
 
-    <!-- Contact form JS-->
-    <!-- <script src="assets/mail/jqBootstrapValidation.js"></script>
-    <script src="assets/mail/contact_me.js"></script> -->
-
     <!-- Core theme JS -->
     <script>
         $(document).ready(function () {
+
             if (window.innerWidth > 1000) {
                 $('#fullpage').fullpage({
                     //options here
@@ -310,20 +163,16 @@
                     anchors: ['main', 'about', 'portfolio', 'someproject', 'quote', 'contact'],
                     css3: true,
                     scrollingSpeed: 800,
-                    navigation: true,
-                    navigationPosition: 'left',
                     slidesNavigation: false,
-                    responsiveHeight: 330,
                     controlArrows: false,
                     scrollOverflow: true,
                     scrollHorizontally: false,
                 });
 
-                var gallery = $('.gallery a').simpleLightbox();
+                fullpage_api.setAutoScrolling(false);
+                fullpage_api.setResponsive(true);
 
-                fullpage_api.setKeyboardScrolling(false, 'left, right');
             } else {
-
 
                 $('#fullpage').fullpage({
                     //options here
@@ -333,21 +182,24 @@
                     scrollingSpeed: 800,
                     navigation: false,
                     slidesNavigation: false,
-                    // responsiveHeight: 330,
                     controlArrows: false,
-                    scrollOverflow: true,
+                    scrollOverflow: false,
                     scrollHorizontally: false,
                 });
 
+                fullpage_api.setAutoScrolling(false);
                 fullpage_api.setResponsive(true);
                 fullpage_api.setKeyboardScrolling(false, 'left, right');
             }
 
+
+            $(".ct-btn-scroll").on('click', function (event) {
+                fullpage_api.moveSectionDown();
+            });
+
             $('#viewgallery').click(() => {
                 fullpage_api.moveSlideRight();
             });
-
-
         });
     </script>
     <script>
@@ -573,10 +425,6 @@
             //     title: 'Hello World!'
             // });
         }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
-    <script>
-        baguetteBox.run('.tz-gallery');
     </script>
 </body>
 
